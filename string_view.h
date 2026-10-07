@@ -129,7 +129,7 @@ StringView sv_chop_left_pred(StringView sv, CharPredicate pred) {
 }
 
 StringView sv_chop_right_pred(StringView sv, CharPredicate pred) {
-  while (pred(sv_at(sv, sv.length))) {
+  while (pred(sv_at(sv, sv.length - 1))) {
     sv.length--;
   }
 
@@ -145,7 +145,7 @@ StringView sv_trim_left(StringView sv) {
   return sv;
 }
 StringView sv_trim_right(StringView sv) {
-  while (isspace(sv_at(sv, sv.length))) {
+  while (isspace(sv_at(sv, sv.length - 1))) {
     sv.length--;
   }
 
