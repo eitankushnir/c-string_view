@@ -6,8 +6,8 @@
 #include <stdint.h>
 #include <string.h>
 
-#ifndef STRING_VIEW_DEFINITION
-#define STRING_VIEW_DEFINITION
+#ifndef STRING_VIEW_DEFINED
+#define STRING_VIEW_DEFINED
 typedef struct {
   const char *data;
   size_t length;
